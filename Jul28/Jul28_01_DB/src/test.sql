@@ -20,5 +20,13 @@ SELECT * FROM snack;
 SELECT MAX(s_price) AS 최고가,AVG(s_price) AS 평균가,AVG(s_price/snack.s_wieght) AS "g당 최저가",COUNT(*) AS "과자 총 개수" FROM snack;
 
 SELECT * FROM snack WHERE s_date-SYSDATE<0;
+SELECT * FROM snack WHERE
+                        s_date >= TO_DATE(CONCAT(TO_CHAR(SYSDATE,'YYYY-MM-DD'),'23:59:59'),'YYYY-MM-DD HH24:MI:SS');
+
+SELECT s_name, s_price FROM snack WHERE s_price=(SELECT MAX(s_price) FROM snack);
+
+SELECT s_name,s_price FROM snack WHERE s_price>(SELECT AVG(s_price) FROM snack);
+SELECT s_name,s_price/snack.s_wieght AS 그람당가격 FROM snack WHERE s_price>(SELECT MIN(s_price) FROM snack);
+SELECT s_name,s_price FROM snack WHERE s_price/snack.s_wieght = (SELECT MAX(s_price/snack.s_wieght) FROM snack);
 
 DROP TABLE snack CASCADE CONSTRAINTS;
