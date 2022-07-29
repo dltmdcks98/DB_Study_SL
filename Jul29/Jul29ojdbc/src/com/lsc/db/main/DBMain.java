@@ -4,7 +4,9 @@ package com.lsc.db.main;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+/*
+instantclient_21_6에 있는 ojdbc.jar를 넣어서 함
+ */
 public class DBMain {
     public static void main(String[] args) {
 
