@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Jul29ojdbc:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Jul29ojdbc_jar</output-path>
+    <root id="archive" name="Jul29ojdbc.jar">
+      <element id="module-output" name="Jul29ojdbc" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/instantclient-basic-windows.x64-21.6.0.0.0dbru/instantclient_21_6/ojdbc8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../Java/Java_Study_SL/Jul26/json-simple-1.1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
